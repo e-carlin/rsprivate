@@ -1,0 +1,87 @@
+{
+    "appModes": {},
+    "enum": {},
+    "dynamicFiles": {
+        "externalLibs": {
+            "js": [
+                "vtk.js"
+            ]
+        },
+        "sirepoLibs": {
+            "js": [
+                "rsprivate.js",
+                "sirepo-lattice.js"
+            ],
+            "css": [
+                "lattice.css",
+                "rsprivate.css"
+            ]
+        }
+    },
+    "frameIdFields": {},
+    "localRoutes": {
+        "source": {
+            "config": {
+                "controller": "SourceController as source",
+                "templateUrl": "/static/html/rsprivate-source.html"
+            }
+        },
+        "control": {
+            "route": "/control/:simulationId",
+            "config": {
+              "controller": "CommandController as control",
+              "template": "<div data-command-tab=\"\" data-controller=\"control\"></div>"
+            }
+        },
+        "lattice": {
+            "route": "/lattice/:simulationId",
+            "config": {
+                "controller": "LatticeController as lattice",
+                "template": "<div data-lattice-tab=\"\" data-controller=\"lattice\"></div>"
+            }
+        }
+    },
+    "model": {
+        "beamline": {
+            "name": ["Name", "ValidatedString"]
+        },
+        "_ELEMENT": {
+            "l": ["L [m]", "RPNValue", 0, "The element length"]
+        },
+        "SOLENOID": {
+            "_super": ["_", "model", "_ELEMENT"],
+            "name": ["NAME", "ValidatedString", "", ""]
+        },
+        "command_distribution": {
+            "name": ["NAME", "ValidatedString", "", ""],
+            "type": ["TYPE", "DistributionType", "", "Distribution type: FROMFILE, GAUSS, BINOMIAL, FLATTOP, GUNGAUSSFLATTOPTH, ASTRAFLATTOPTH"]
+        }
+    },
+    "strings": {
+        "simulationSource": "RSPrivate Source (*.in)"
+    },
+    "view": {
+        "beamline": {
+            "title": "Beamline",
+            "advanced": [
+                "name"
+            ]
+        },
+        "SOLENOID": {
+            "title": "SOLENOID",
+            "description": "A solenoid",
+            "fieldsPerTab": 8,
+            "advanced": [
+                "name"
+            ]
+        },
+        "command_distribution": {
+            "title": "Distribution",
+            "description": "The DISTRIBUTION statement defines data for the 6D particle distribution.",
+            "basic": [
+                "type"
+            ],
+            "advanced": []
+        }
+    }
+}
