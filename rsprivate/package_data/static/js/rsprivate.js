@@ -68,14 +68,14 @@ SIREPO.app.directive('appFooter', function() {
 	},
         template: [
             '<div data-common-footer="nav"></div>',
-            '<div data-import-dialog="" data-title="Import Opal File" data-description="Select an OPAL .in or .madx file." data-file-formats=".in,.madx,.zip">',
+            '<div data-import-dialog="" data-title="Import RSPrivate File" data-description="Select an RSPRivate .in or .madx file." data-file-formats=".in,.madx,.zip">',
             '</div>',
 	].join(''),
     };
 });
 
-// must import opalService so it registers with appState
-SIREPO.app.directive('appHeader', function(appState, latticeService, opalService, panelState) {
+// must import rsprivateService so it registers with appState
+SIREPO.app.directive('appHeader', function(appState, latticeService, rsprivateService, panelState) {
     return {
 	restrict: 'A',
 	scope: {

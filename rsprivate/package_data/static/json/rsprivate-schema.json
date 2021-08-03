@@ -1,4 +1,10 @@
 {
+    "appInfo": {
+       "rsprivate": {
+           "longName": "RSPrivate",
+            "shortName": "RSPrivate"
+       }
+    },
     "appModes": {},
     "enum": {},
     "dynamicFiles": {
@@ -10,9 +16,11 @@
         "sirepoLibs": {
             "js": [
                 "rsprivate.js",
+                "sirepo-command.js",
                 "sirepo-lattice.js"
             ],
             "css": [
+                "command.css",
                 "lattice.css",
                 "rsprivate.css"
             ]
