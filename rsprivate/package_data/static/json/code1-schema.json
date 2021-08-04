@@ -53,6 +53,11 @@
         "beamline": {
             "name": ["Name", "ValidatedString"]
         },
+        "sauce": {
+            "color": ["Color", "String", "", ""],
+            "scoville": ["Scoville", "Integer", 0]
+        },
+        "spiceReport": {},
         "_ELEMENT": {
             "l": ["L [m]", "RPNValue", 0, "The element length"]
         },
@@ -69,6 +74,18 @@
         "simulationSource": "Code 1 Source (*.in)"
     },
     "view": {
+        "sauce": {
+            "title": "Sauce characteristics",
+            "basic": [
+                "color",
+                "scoville"
+            ],
+            "advanced": []
+        },
+        "spiceReport": {
+            "title": "How hot is too hot?",
+            "advanced": []
+        },
         "beamline": {
             "title": "Beamline",
             "advanced": [
