@@ -13,7 +13,7 @@ SIREPO.app.config(function() {
     };
 });
 
-SIREPO.app.factory('rsprivateService', function(appState, commandService, latticeService) {
+SIREPO.app.factory('code1Service', function(appState, commandService, latticeService) {
     var self = {};
 
     self.computeModel = function(analysisModel) {
@@ -68,14 +68,14 @@ SIREPO.app.directive('appFooter', function() {
 	},
         template: [
             '<div data-common-footer="nav"></div>',
-            '<div data-import-dialog="" data-title="Import RSPrivate File" data-description="Select an RSPRivate .in or .madx file." data-file-formats=".in,.madx,.zip">',
+            '<div data-import-dialog="" data-title="Import Code1 File" data-description="Select an Code1 .in or .madx file." data-file-formats=".in,.madx,.zip">',
             '</div>',
 	].join(''),
     };
 });
 
-// must import rsprivateService so it registers with appState
-SIREPO.app.directive('appHeader', function(appState, latticeService, rsprivateService, panelState) {
+// must import code1Service so it registers with appState
+SIREPO.app.directive('appHeader', function(appState, latticeService, code1Service, panelState) {
     return {
 	restrict: 'A',
 	scope: {
