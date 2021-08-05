@@ -10,7 +10,7 @@ pksetup.setup(
     name='rsprivate',
     author='RadiaSoft LLC',
     author_email='pip@radiasoft.net',
-    description='--description=super secret repo',
+    description='super secret repo',
     install_requires=[
         'pykern',
     ],

@@ -1,6 +1,6 @@
 ### rsprivate
 
---description=super secret repo
+super secret repo
 
 Learn more at https://github.com/radiasoft/rsprivate.
 
