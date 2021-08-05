@@ -23,4 +23,4 @@ class SimData(sirepo.sim_data.SimDataBase):
 
     @classmethod
     def _lib_file_basenames(cls, *args, **kwargs):
-        return []
+        return ['a-lib-file.txt']
