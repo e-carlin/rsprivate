@@ -21,4 +21,11 @@ def run(cfg_dir):
     pksubprocess.check_call_with_signals(
         [sys.executable, template_common.PARAMETERS_PYTHON_FILE],
     )
-    template_common.write_sequential_result(PKDict(foo='bar'))
+    template_common.write_sequential_result(PKDict(
+        title='A title',
+        x_range=[0, 10],
+        y_label='y label',
+        x_label='x label',
+        x_points=[0,2,4,6,8,10],
+        y_range=[1, 8],
+    ))
